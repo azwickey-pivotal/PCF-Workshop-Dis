@@ -52,14 +52,14 @@ Now both the services are registering _directly_ with their IP addresses.  Why d
 
 We will see that multiple instances of apps are running in a bounded context, hence refreshing an app, really means refreshing the instance we have connected to.
 * Open two terminal windows:
+	* cf logs fortune-service | grep INFO
 	* cf logs greeting-service | grep DEBUG
-	* cf logs greeting-service | grep INFO
 * Open a third terminal window
 	* Set "logging: DEBUG" in greeting-service.yml
 	* git push the changes
 	* curl -X POST https://greeting-service-route/refresh
 
-Notice that only 1 instance is in DEBUG logging mode -- so we need cloud bus refresh to hit them all
+Notice that only 1 instance was updated for the greeting service in DEBUG logging mode -- so we need cloud bus refresh to hit them all at the same time
 
 ####6. *Set up Cloud Bus*
 
@@ -68,7 +68,7 @@ To get around the bounded context of a microservice, we add a Cloud Bus that is 
 * cf bind-service greeting-service cloud-bus
 * cf push greeting-service -p target/greeting-service-0.0.1-SNAPSHOT.jar -m 512M -i 2
 	
-####7. *Change Logging Levels back to INFO for all instances*
+####7. *Change Logging Levels to INFO for all instances*
 
 Now that we have a Bus set up, we can adjust logging for all our instances at once
 * Set "logging: INFO" in greeting-service.yml
