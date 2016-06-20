@@ -14,13 +14,13 @@ Notice in the repo that each app has its own YML file with specific configuratio
 ####2. *Set up Fortune Service* 
 
 This service will serve fortunes to the greeting service, it will pull its initial logging and Eureka registration methods from the Config Server repo.
-* cd fortune-service
+* cd fortune-teller/fortune-service
 * mvn clean package
 * cf push fortune-service -p target/fortune-service-0.0.1-SNAPSHOT.jar -m 512M --random-route --no-start
 * cf create-service p-service-registry standard service-registry
 * cf bind-service fortune-service config-server
 * cf bind-service fortune-service service-registry
-* cf set-env fortune-service CF_TARGET https://api.your.domain.com
+* cf set-env fortune-service CF_TARGET https://api.system.pivotalpoc.hosts.disney.pvt
 * cf start fortune-service
 
 Its mandatory that CF_TARGET is set so the service discovery works properly.
@@ -28,12 +28,12 @@ Its mandatory that CF_TARGET is set so the service discovery works properly.
 ####3. *Set up Greeting Service* 
 
 This service will provide a front end UI to the system, like fortune-service, it will pull its initial logging and Eureka registration method from the Config Server repo.
-* cd greeting-service/
+* cd fortune-teller/greeting-service
 * mvn clean package
 * cf push greeting-service -p target/greeting-service-0.0.1-SNAPSHOT.jar -m 512M -i 2 --random-route --no-start
 * cf bind-service greeting-service config-server
 * cf bind-service greeting-service service-registry
-* cf set-env greeting-service CF_TARGET https://api.your.domain.com
+* cf set-env greeting-service CF_TARGET https://api.system.pivotalpoc.hosts.disney.pvt
 * cf start greeting-service
 
 By now you should be able to see each app registered within Service Discovery Management console.  Note how each app registers differently, with either a Route, or a container IP address.  When we apply client side load balancing with Ribbon, each registration method should be direct, otherwise we are adding reduntant load balancing via the Go router which defeats the purpose of using Ribbon in the first place.
