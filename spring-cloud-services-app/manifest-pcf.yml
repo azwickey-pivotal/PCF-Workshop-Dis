@@ -18,4 +18,4 @@ applications:
   - circuit-breaker
 env:
   SPRING_PROFILES_ACTIVE: pcf
-  CF_TARGET: https://api.run.pez.pivotal.io
+  CF_TARGET: https://api.system.pivotalpoc.hosts.disney.pvt
