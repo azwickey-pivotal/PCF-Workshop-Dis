@@ -15,6 +15,7 @@ However, it is most easily deployed to Pivotal Cloud Foundry environments that h
 . Using Maven, build and package the application:
 +
 ----
+$ cd fortune-teller
 $ mvn package
 ----
 +

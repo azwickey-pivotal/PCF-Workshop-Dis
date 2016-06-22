@@ -15,6 +15,7 @@ However, it is most easily deployed to Pivotal Cloud Foundry environments that h
 . Using Maven, build and package the application:
 +
 ----
+$ cd fortune-teller
 $ mvn package
 ----
 +
@@ -92,4 +93,4 @@ $ cf start fortunes
 
 . Continue to access the fortunes-ui and watch the dashboard.
 After the fortunes service has re-registered with Eureka and the fortunes-ui load balancer caches are refreshed, you will see the circuit breaker recover.
-You should then start getting random fortunes again!!!
+You should then start getting random fortunes again!
