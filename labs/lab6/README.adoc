@@ -1,4 +1,4 @@
-= Fortune Teller
+= Spring Cloud Services Lab
 
 *Fortune Teller* is a very basic application composed of two services:
 
@@ -15,7 +15,7 @@ However, it is most easily deployed to Pivotal Cloud Foundry environments that h
 . Using Maven, build and package the application:
 +
 ----
-$ cd fortune-teller
+$ cd spring-cloud-services-app
 $ mvn package
 ----
 +
