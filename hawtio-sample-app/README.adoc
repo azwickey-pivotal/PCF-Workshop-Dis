@@ -51,4 +51,4 @@ This will push the Hawt.io service and client app, binding to the services
 
 . In a browser, access the Hawt.io service application at the route that was created for you at the */hawtio* endpoint:
 +
-image:docs/images/hawtio_1.png[]
+image:../labs/lab7/hawt1.png[]
