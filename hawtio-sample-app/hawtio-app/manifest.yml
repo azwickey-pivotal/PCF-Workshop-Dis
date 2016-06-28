@@ -1,0 +1,8 @@
+applications:
+- name: hawt-app
+  memory: 512M
+  instances: 1
+  host: hawt-app-${random-word}
+  path: ./hawtio-app-1.4.65.jar
+  env:
+      JAVA_OPTS: -Djava.security.egd=file:///dev/urandom -Dhawtio.proxyDisableCertificateValidation=true
