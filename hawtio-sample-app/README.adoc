@@ -2,6 +2,8 @@
 
 *Hawt.io* provides a slick JVM and JMX monitoring service you can deploy into your space
 
+image:../labs/lab7/hawt2.png[]
+
 . link:hawtio-spring-client[Hawt.io Spring Client] - Basic Spring Boot client for Hawt.io service 
 . link:hawtio-app[Hawt.io App] - presents the UI for the Hawt.io service
 
