@@ -40,3 +40,5 @@ This one day hands-on classroom style session will provide developers (and opera
 *** Java app - Maven Build (To be Added)
 ** Advanced Lab - Spring Cloud & Netflix OSS 
 *** link:labs/lab6/README.adoc[Fortune Teller Project]
+** Hawt.io Lab - Spring Boot integration
+*** link:labs/lab7/README.adoc[Hawt.io and Spring Boot]
