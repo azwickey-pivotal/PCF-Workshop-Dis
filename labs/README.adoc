@@ -14,7 +14,8 @@ image:login.png[]
 +
 image:appsmanager.png[]
 
-. After login, send an email to the instructor: bbertka@pivotal.io
+. Wait a few moments and refresh, click the Org name in the upper left corner of the interface
+. If you still dont see your Org after login, send an email to the instructor: bbertka@pivotal.io
 . In your email, request access to your developer space and be sure to include your BU (ABC, Parks, Studios, etc)
 
 == Target the Environment
