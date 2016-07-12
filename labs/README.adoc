@@ -14,8 +14,8 @@ image:login.png[]
 +
 image:appsmanager.png[]
 
-. Send an email to the instructor requesting access to a developer space with a screenshot of the Apps Manager interface, be sure to include your BU (ABC, Parks, Studios, etc)
-
+. After login, send an email to the instructor: bbertka@pivotal.io
+. In your email, request access to your developer space and be sure to include your BU (ABC, Parks, Studios, etc)
 
 == Target the Environment
 
